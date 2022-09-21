@@ -1,0 +1,27 @@
+package oops_exceptions;
+
+import java.io.*;
+
+public class Throws_excep {
+	
+	 //declare exception using throws in the method signature
+	  void testMethod(int num) throws IOException, ArithmeticException{ 
+	     if(num==1)
+	        throw new IOException("IOException Occurred");
+	     else
+	        throw new ArithmeticException("ArithmeticException");
+	  } 
+
+	public static void main(String[] args) {
+		 try{ 
+		       //this try block calls the above method so handle the exception
+		     Throws_excep obj=new Throws_excep(); 
+		     obj.testMethod(1); 
+		   }
+		 catch(Exception ex){
+		     System.out.println(ex);
+		    } 
+	}
+
+}
+
